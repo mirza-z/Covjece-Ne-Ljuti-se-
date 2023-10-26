@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CovjeceNeLjutiSe", "CovjeceNeLjutiSe\CovjeceNeLjutiSe.csproj", "{6F28CB1E-25EF-45A0-AA88-CA897082EF29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{443E7A9B-3ED3-462E-88C3-C9B4154297B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F28CB1E-25EF-45A0-AA88-CA897082EF29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F28CB1E-25EF-45A0-AA88-CA897082EF29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F28CB1E-25EF-45A0-AA88-CA897082EF29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F28CB1E-25EF-45A0-AA88-CA897082EF29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{443E7A9B-3ED3-462E-88C3-C9B4154297B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{443E7A9B-3ED3-462E-88C3-C9B4154297B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{443E7A9B-3ED3-462E-88C3-C9B4154297B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{443E7A9B-3ED3-462E-88C3-C9B4154297B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91725F36-C48D-40C9-A960-FCA3572B741E}
+	EndGlobalSection
+EndGlobal
