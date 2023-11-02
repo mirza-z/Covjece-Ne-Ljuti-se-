@@ -71,7 +71,37 @@ namespace Data
             Tabla.Add(new Lokacija() { Left = 240 + 39 * 2, Top = 495 + 39 * 1 }); //49
             Tabla.Add(new Lokacija() { Left = 240 + 39 * 1, Top = 495 + 39 * 1 }); //50
             Tabla.Add(new Lokacija() { Left = 240 + 39 * 0, Top = 495 + 39 * 1 }); //51
-       
+
+            //Plava
+            Tabla.Add(new Lokacija() { Left = 279, Top = 495 }); // 52
+            Tabla.Add(new Lokacija() { Left = 279, Top = 455 }); // 53
+            Tabla.Add(new Lokacija() { Left = 279, Top = 418 }); // 54
+            Tabla.Add(new Lokacija() { Left = 279, Top = 380 }); // 55
+            Tabla.Add(new Lokacija() { Left = 279, Top = 342 }); // 56
+            Tabla.Add(new Lokacija() { Left = 279, Top = 300 }); // 57
+
+            //Crvena
+            Tabla.Add(new Lokacija() { Left = 42, Top = 266 }); // 58
+            Tabla.Add(new Lokacija() { Left = 81, Top = 266 }); // 59
+            Tabla.Add(new Lokacija() { Left = 121, Top = 266 }); // 60
+            Tabla.Add(new Lokacija() { Left = 160, Top = 266 }); // 61
+            Tabla.Add(new Lokacija() { Left = 200, Top = 266 }); // 62
+            Tabla.Add(new Lokacija() { Left = 242, Top = 266 }); // 63
+
+            //Zelena
+            Tabla.Add(new Lokacija() { Left = 279, Top = 38 }); // 64
+            Tabla.Add(new Lokacija() { Left = 279, Top = 76 }); // 65
+            Tabla.Add(new Lokacija() { Left = 279, Top = 114 }); // 66
+            Tabla.Add(new Lokacija() { Left = 279, Top = 152 }); // 67
+            Tabla.Add(new Lokacija() { Left = 279, Top = 189 }); // 68
+            Tabla.Add(new Lokacija() { Left = 279, Top = 230 }); // 69
+            // Zuta
+            Tabla.Add(new Lokacija() { Left = 516, Top = 266 }); // 70
+            Tabla.Add(new Lokacija() { Left = 477, Top = 266 }); // 71
+            Tabla.Add(new Lokacija() { Left = 437, Top = 266 }); // 72
+            Tabla.Add(new Lokacija() { Left = 398, Top = 266 }); // 73
+            Tabla.Add(new Lokacija() { Left = 358, Top = 266 }); // 74
+            Tabla.Add(new Lokacija() { Left = 320, Top = 266 }); // 75
         }
     }
 }
