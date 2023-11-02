@@ -48,6 +48,8 @@
             btnKocka = new Button();
             btnBroj = new Button();
             btnNaPotezu = new Button();
+            btnSkip = new Button();
+            btnRestart = new Button();
             ((System.ComponentModel.ISupportInitialize)pbPlavi1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPlavi2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPlavi3).BeginInit();
@@ -260,9 +262,11 @@
             // 
             // btnKocka
             // 
-            btnKocka.BackColor = Color.Maroon;
+            btnKocka.BackColor = Color.Silver;
+            btnKocka.FlatAppearance.BorderSize = 0;
+            btnKocka.FlatStyle = FlatStyle.Flat;
             btnKocka.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnKocka.Location = new Point(396, 535);
+            btnKocka.Location = new Point(219, 575);
             btnKocka.Margin = new Padding(0);
             btnKocka.Name = "btnKocka";
             btnKocka.Size = new Size(111, 37);
@@ -276,23 +280,54 @@
             // 
             btnBroj.Enabled = false;
             btnBroj.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            btnBroj.Location = new Point(524, 533);
+            btnBroj.Location = new Point(347, 575);
             btnBroj.Name = "btnBroj";
             btnBroj.Size = new Size(37, 37);
             btnBroj.TabIndex = 33;
-            btnBroj.Text = "6";
+            btnBroj.Text = "X";
             btnBroj.UseVisualStyleBackColor = true;
             // 
             // btnNaPotezu
             // 
+            btnNaPotezu.BackColor = Color.Olive;
+            btnNaPotezu.Enabled = false;
+            btnNaPotezu.FlatAppearance.BorderColor = Color.Silver;
+            btnNaPotezu.FlatAppearance.BorderSize = 0;
+            btnNaPotezu.FlatAppearance.MouseDownBackColor = Color.Lime;
+            btnNaPotezu.FlatStyle = FlatStyle.Popup;
             btnNaPotezu.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNaPotezu.Location = new Point(49, 535);
+            btnNaPotezu.Location = new Point(39, 575);
             btnNaPotezu.Name = "btnNaPotezu";
-            btnNaPotezu.Size = new Size(180, 37);
+            btnNaPotezu.Size = new Size(162, 37);
             btnNaPotezu.TabIndex = 34;
             btnNaPotezu.Text = "Igra: Plavi";
-            btnNaPotezu.UseVisualStyleBackColor = true;
-            btnNaPotezu.Enabled = false;
+            btnNaPotezu.UseVisualStyleBackColor = false;
+            // 
+            // btnSkip
+            // 
+            btnSkip.FlatAppearance.BorderSize = 0;
+            btnSkip.FlatStyle = FlatStyle.Flat;
+            btnSkip.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSkip.Location = new Point(471, 575);
+            btnSkip.Name = "btnSkip";
+            btnSkip.Size = new Size(64, 37);
+            btnSkip.TabIndex = 35;
+            btnSkip.Text = "Preskoci";
+            btnSkip.UseVisualStyleBackColor = true;
+            btnSkip.Click += btnSkip_Click;
+            // 
+            // btnRestart
+            // 
+            btnRestart.BackgroundImage = (Image)resources.GetObject("btnRestart.BackgroundImage");
+            btnRestart.BackgroundImageLayout = ImageLayout.Stretch;
+            btnRestart.FlatAppearance.BorderSize = 0;
+            btnRestart.FlatStyle = FlatStyle.Flat;
+            btnRestart.Location = new Point(547, 575);
+            btnRestart.Name = "btnRestart";
+            btnRestart.Size = new Size(37, 37);
+            btnRestart.TabIndex = 36;
+            btnRestart.UseVisualStyleBackColor = true;
+            btnRestart.Click += btnRestart_Click;
             // 
             // Form1
             // 
@@ -300,7 +335,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(596, 573);
+            ClientSize = new Size(596, 616);
+            Controls.Add(btnRestart);
+            Controls.Add(btnSkip);
             Controls.Add(btnNaPotezu);
             Controls.Add(btnBroj);
             Controls.Add(btnKocka);
@@ -320,9 +357,10 @@
             Controls.Add(pbPlavi3);
             Controls.Add(pbPlavi2);
             Controls.Add(pbPlavi1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Covjece Ne Ljuti Se";
             ((System.ComponentModel.ISupportInitialize)pbPlavi1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPlavi2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPlavi3).EndInit();
@@ -369,5 +407,7 @@
         private Button btnKocka;
         private Button btnBroj;
         private Button btnNaPotezu;
+        private Button btnSkip;
+        private Button btnRestart;
     }
 }

@@ -1,4 +1,5 @@
 using Data;
+using Microsoft.VisualBasic;
 
 namespace CovjeceNeLjutiSe
 {
@@ -10,22 +11,27 @@ namespace CovjeceNeLjutiSe
         Igrac igrac3 = new Igrac(2);
         Igrac igrac4 = new Igrac(3);
 
-        Pijun pijun1 = new Pijun() { Ime = "pbPlavi1", DefaultnaLokacija = new Lokacija(62, 396), Id = 0, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun2 = new Pijun() { Ime = "pbPlavi2", DefaultnaLokacija = new Lokacija(140, 396), Id = 1, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun3 = new Pijun() { Ime = "pbPlavi3", DefaultnaLokacija = new Lokacija(62, 473), Id = 2, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun4 = new Pijun() { Ime = "pbPlavi4", DefaultnaLokacija = new Lokacija(140, 473), Id = 3, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun5 = new Pijun() { Ime = "pbCrveni1", DefaultnaLokacija = new Lokacija(62, 55), Id = 0, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun6 = new Pijun() { Ime = "pbCrveni2", DefaultnaLokacija = new Lokacija(140, 55), Id = 1, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun7 = new Pijun() { Ime = "pbCrveni3", DefaultnaLokacija = new Lokacija(62, 132), Id = 2, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun8 = new Pijun() { Ime = "pbCrveni4", DefaultnaLokacija = new Lokacija(140, 132), Id = 3, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun9 = new Pijun() { Ime = "pbZeleni1", DefaultnaLokacija = new Lokacija(418, 55), Id = 0, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun10 = new Pijun() { Ime = "pbZeleni2", DefaultnaLokacija = new Lokacija(496, 55), Id = 1, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun11 = new Pijun() { Ime = "pbZeleni3", DefaultnaLokacija = new Lokacija(418, 132), Id = 2, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun12 = new Pijun() { Ime = "pbZeleni4", DefaultnaLokacija = new Lokacija(496, 132), Id = 3, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun13 = new Pijun() { Ime = "pbZeleni1", DefaultnaLokacija = new Lokacija(418, 396), Id = 0, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun14 = new Pijun() { Ime = "pbZeleni2", DefaultnaLokacija = new Lokacija(496, 396), Id = 1, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun15 = new Pijun() { Ime = "pbZeleni3", DefaultnaLokacija = new Lokacija(418, 473), Id = 2, LegalanPotez = false, TrenutnaLokacija = -1 };
-        Pijun pijun16 = new Pijun() { Ime = "pbZeleni4", DefaultnaLokacija = new Lokacija(496, 473), Id = 3, LegalanPotez = false, TrenutnaLokacija = -1 };
+        List<PictureBox> pictureBoxes = new List<PictureBox>();
+
+
+
+
+        Pijun pijun1 = new Pijun() { DefaultnaLokacija = new Lokacija(62, 396), Id = 0, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun2 = new Pijun() { DefaultnaLokacija = new Lokacija(140, 396), Id = 1, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun3 = new Pijun() { DefaultnaLokacija = new Lokacija(62, 473), Id = 2, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun4 = new Pijun() { DefaultnaLokacija = new Lokacija(140, 473), Id = 3, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun5 = new Pijun() { DefaultnaLokacija = new Lokacija(62, 55), Id = 0, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun6 = new Pijun() { DefaultnaLokacija = new Lokacija(140, 55), Id = 1, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun7 = new Pijun() { DefaultnaLokacija = new Lokacija(62, 132), Id = 2, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun8 = new Pijun() { DefaultnaLokacija = new Lokacija(140, 132), Id = 3, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun9 = new Pijun() { DefaultnaLokacija = new Lokacija(418, 55), Id = 0, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun10 = new Pijun() { DefaultnaLokacija = new Lokacija(496, 55), Id = 1, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun11 = new Pijun() { DefaultnaLokacija = new Lokacija(418, 132), Id = 2, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun12 = new Pijun() { DefaultnaLokacija = new Lokacija(496, 132), Id = 3, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun13 = new Pijun() { DefaultnaLokacija = new Lokacija(418, 396), Id = 0, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun14 = new Pijun() { DefaultnaLokacija = new Lokacija(496, 396), Id = 1, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun15 = new Pijun() { DefaultnaLokacija = new Lokacija(418, 473), Id = 2, UKucici = false, TrenutnaLokacija = -1 };
+        Pijun pijun16 = new Pijun() { DefaultnaLokacija = new Lokacija(496, 473), Id = 3, UKucici = false, TrenutnaLokacija = -1 };
 
         Polje polje = new Polje();
         public Form1()
@@ -58,40 +64,155 @@ namespace CovjeceNeLjutiSe
 
             InitializeComponent();
 
+            pictureBoxes.Add(pbPlavi1);
+            pictureBoxes.Add(pbPlavi2);
+            pictureBoxes.Add(pbPlavi3);
+            pictureBoxes.Add(pbPlavi4);
+            pictureBoxes.Add(pbCrveni1);
+            pictureBoxes.Add(pbCrveni2);
+            pictureBoxes.Add(pbCrveni3);
+            pictureBoxes.Add(pbCrveni4);
+            pictureBoxes.Add(pbZeleni1);
+            pictureBoxes.Add(pbZeleni2);
+            pictureBoxes.Add(pbZeleni3);
+            pictureBoxes.Add(pbZeleni4);
+            pictureBoxes.Add(pbZuti1);
+            pictureBoxes.Add(pbZuti2);
+            pictureBoxes.Add(pbZuti3);
+            pictureBoxes.Add(pbZuti4);
 
-            ZapocniIgru(igra);
+            IgraSljedeci(naPotezu);
+
         }
 
         int kocka = 0;
-        private void ZapocniIgru(Igra igra)
+        int naPotezu = 0;
+        int brojBacanja = 0;
+
+
+        private void IgraSljedeci(int naPotezu)
         {
-            IgraPlavi();
+            
+            btnBroj.Text = "X";
+            if (naPotezu == 4)
+                naPotezu = 0;
+            ProvjeriPobijedu(naPotezu);
+            brojBacanja = 0;
+            kocka = 0;
+            switch (naPotezu)
+            {
+                case 0: IgraPlavi(); break;
+                case 1: IgraCrveni(); break;
+                case 2: IgraZeleni(); break;
+                case 3: IgraZuti(); break;
+            }
         }
 
+        private void ProvjeriPobijedu(int igracID)
+        {
+            int uslov = 0;
+            for(int i=0; i<4; i++)
+            {
+                if (igra.igraci[igracID].pijuni[i].UKucici)
+                    uslov++;
+            }
+            if(uslov == 4)
+            {
+                if(uslov == 0)
+                    MessageBox.Show("Plavi je pobijedio.");
+                if (uslov == 1)
+                    MessageBox.Show("Crveni je pobijedio.");
+                if (uslov == 2)
+                    MessageBox.Show("Zeleni je pobijedio.");
+                if (uslov == 3)
+                    MessageBox.Show("Zuti je pobijedio.");
+                Restartuj();
+            }
+        }
+
+        private void UgasiKontrole()
+        {
+
+            pbPlavi1.Enabled = false;
+            pbPlavi2.Enabled = false;
+            pbPlavi3.Enabled = false;
+            pbPlavi4.Enabled = false;
+
+            pbCrveni1.Enabled = false;
+            pbCrveni2.Enabled = false;
+            pbCrveni3.Enabled = false;
+            pbCrveni4.Enabled = false;
+
+            pbZeleni1.Enabled = false;
+            pbZeleni2.Enabled = false;
+            pbZeleni3.Enabled = false;
+            pbZeleni4.Enabled = false;
+
+            pbZuti1.Enabled = false;
+            pbZuti2.Enabled = false;
+            pbZuti3.Enabled = false;
+            pbZuti4.Enabled = false;
+        }
         private void IgraPlavi()
         {
-            PostaviIliUgasiKontrole(0);
-            btnKocka.Enabled =true;
+            UgasiKontrole();
+            if (!igra.igraci[0].pijuni[0].UKucici)
+                pbPlavi1.Enabled = true;
+            if (!igra.igraci[0].pijuni[1].UKucici)
+                pbPlavi2.Enabled = true;
+            if (!igra.igraci[0].pijuni[2].UKucici)
+                pbPlavi3.Enabled = true;
+            if (!igra.igraci[0].pijuni[3].UKucici)
+                pbPlavi4.Enabled = true;
+
+            btnKocka.Enabled = true;
             btnNaPotezu.Text = "Igra: Plavi";
         }
-
         private void IgraCrveni()
         {
-            PostaviIliUgasiKontrole(1);
+            UgasiKontrole();
+
+            if (!igra.igraci[1].pijuni[0].UKucici)
+                pbCrveni1.Enabled = true;
+            if (!igra.igraci[1].pijuni[1].UKucici)
+                pbCrveni2.Enabled = true;
+            if (!igra.igraci[1].pijuni[2].UKucici)
+                pbCrveni3.Enabled = true;
+            if (!igra.igraci[1].pijuni[3].UKucici)
+                pbCrveni4.Enabled = true;
+
             btnKocka.Enabled = true;
             btnNaPotezu.Text = "Igra: Crveni";
         }
-
         private void IgraZeleni()
         {
-            PostaviIliUgasiKontrole(2);
+            UgasiKontrole();
+
+            if (!igra.igraci[2].pijuni[0].UKucici)
+                pbZeleni1.Enabled = true;
+            if (!igra.igraci[2].pijuni[1].UKucici)
+                pbZeleni2.Enabled = true;
+            if (!igra.igraci[2].pijuni[2].UKucici)
+                pbZeleni3.Enabled = true;
+            if (!igra.igraci[2].pijuni[3].UKucici)
+                pbZeleni4.Enabled = true;
+
             btnKocka.Enabled = true;
             btnNaPotezu.Text = "Igra: Zeleni";
         }
-
         private void IgraZuti()
         {
-            PostaviIliUgasiKontrole(3);
+            UgasiKontrole();
+
+            if (!igra.igraci[3].pijuni[0].UKucici)
+                pbZuti1.Enabled = true;
+            if (!igra.igraci[3].pijuni[1].UKucici)
+                pbZuti2.Enabled = true;
+            if (!igra.igraci[3].pijuni[2].UKucici)
+                pbZuti3.Enabled = true;
+            if (!igra.igraci[3].pijuni[3].UKucici)
+                pbZuti4.Enabled = true;
+
             btnKocka.Enabled = true;
             btnNaPotezu.Text = "Igra: Zuti";
         }
@@ -101,393 +222,360 @@ namespace CovjeceNeLjutiSe
             Random rnd = new Random();
             kocka = rnd.Next(1, 7);
             btnBroj.Text = kocka.ToString();
-            // btnKocka.Enabled = false;
-        }
-        private void PostaviIliUgasiKontrole(int x)
-        {
-            bool uslov = false;
-            if (x == 0)
+            brojBacanja++;
+            bool uBazi = true;
+            for (int i = 0; i < 4; i++)
             {
-                uslov = true;
+                //restartuj brojac
+                if (naPotezu >= 4)
+                    naPotezu = 0;
+                // provjeri 
+                if (igra.igraci[naPotezu].pijuni[i].TrenutnaLokacija != -1)
+                {
+                    uBazi = false;
+                }
             }
-            pbPlavi1.Enabled = uslov;
-            pbPlavi2.Enabled = uslov;
-            pbPlavi3.Enabled = uslov;
-            pbPlavi4.Enabled = uslov;
-            uslov = false;
-            if (x == 1)
+
+            if (uBazi == false)
             {
-                uslov = true;
-                
+                btnKocka.Enabled = false;
             }
-            pbCrveni1.Enabled = uslov;
-            pbCrveni2.Enabled = uslov;
-            pbCrveni3.Enabled = uslov;
-            pbCrveni4.Enabled = uslov;
-            uslov = false;
-            if (x == 2)
+            else if (uBazi == true && kocka == 6)
             {
-                uslov = true;
+                btnKocka.Enabled = false;
             }
-            pbZeleni1.Enabled = uslov;
-            pbZeleni2.Enabled = uslov;
-            pbZeleni3.Enabled = uslov;
-            pbZeleni4.Enabled = uslov;
-            if (x == 3)
+            else if (brojBacanja >= 3 && kocka != 6 && uBazi == true)
             {
-                uslov = true;
+                brojBacanja = 0;
+                naPotezu++;
+                IgraSljedeci(naPotezu);
             }
-            pbZuti1.Enabled = uslov;
-            pbZuti2.Enabled = uslov;
-            pbZuti3.Enabled = uslov;
-            pbZuti4.Enabled = uslov;
         }
 
+        private void PomjeriPlave(int lokacija, PictureBox figura, int idPijun)
+        {
+            if (lokacija == -1 && kocka == 6)
+            {
+                int x = lokacija = 0;
+                figura.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
+                igra.igraci[0].pijuni[idPijun].TrenutnaLokacija = lokacija;
+                kocka = 0;
+                btnKocka.Enabled = true;
+            }
+
+            else if (lokacija != -1)
+            {
+                if (lokacija + kocka <= 57)
+                {
+                    int x = lokacija + kocka;
+                    if (lokacija < 51 && x > 50)
+                    {
+                        int kockaPoslije;
+                        kockaPoslije = kocka - (50 - lokacija);
+                        lokacija = 51 + kockaPoslije;
+
+                    }
+                    else lokacija += kocka;
+                    x = lokacija;
+                    figura.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
+                    igra.igraci[0].pijuni[idPijun].TrenutnaLokacija = lokacija;
+                    ProvjeriJedeLi(lokacija);
+                    if (lokacija == 57)
+                        igra.igraci[0].pijuni[idPijun].UKucici = true;
+                    if (kocka != 6)
+                    {
+                        kocka = 0;
+                        naPotezu++;
+                        IgraSljedeci(naPotezu);
+                    }
+                    else if (kocka == 6)
+                    {
+                        btnKocka.Enabled = true;
+                    }
+                }
+
+                else
+                {
+                    return;
+                }
+            }
+        }
+        private void PomjeriCrvene(int lokacija, PictureBox figura, int idPijun)
+        {
+            if (lokacija == -1 && kocka == 6)
+            {
+                int x = lokacija = 13;
+                figura.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
+                igra.igraci[1].pijuni[idPijun].TrenutnaLokacija = lokacija;
+                kocka = 0;
+                btnKocka.Enabled = true;
+            }
+
+            else if (lokacija != -1)
+            {
+                if (lokacija + kocka <= 63)
+                {
+                    int x = lokacija + kocka;
+                    if (x > 51 && x < 58)
+                    {
+                        int kockaPoslije;
+                        kockaPoslije = kocka - (51 - lokacija);
+                        lokacija = 0 + kockaPoslije - 1;
+                    }
+                    else if (lokacija < 12 && lokacija > 5 && x > 11)
+                    {
+                        int kockaPoslije;
+                        kockaPoslije = kocka - (11 - lokacija);
+                        lokacija = 57 + kockaPoslije;
+
+                    }
+                    else lokacija += kocka;
+                    x = lokacija;
+                    figura.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
+                    igra.igraci[1].pijuni[idPijun].TrenutnaLokacija = lokacija;
+                    ProvjeriJedeLi(lokacija);
+                    if (lokacija == 63)
+                        igra.igraci[1].pijuni[idPijun].UKucici = true;
+                    if (kocka != 6)
+                    {
+                        kocka = 0;
+                        naPotezu++;
+                        IgraSljedeci(naPotezu);
+                    }
+                    else if (kocka == 6)
+                    {
+                        btnKocka.Enabled = true;
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
+        private void PomjeriZelene(int lokacija, PictureBox figura, int idPijun)
+        {
+            if (lokacija == -1 && kocka == 6)
+            {
+                int x = lokacija = 26;
+                figura.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
+                igra.igraci[2].pijuni[idPijun].TrenutnaLokacija = lokacija;
+                kocka = 0;
+                btnKocka.Enabled = true;
+            }
+
+            else if (lokacija != -1)
+            {
+                if (lokacija + kocka <= 69)
+                {
+                    int x = lokacija + kocka;
+                    if (x > 51 && x < 58)
+                    {
+                        int kockaPoslije;
+                        kockaPoslije = kocka - (51 - lokacija);
+                        lokacija = 0 + kockaPoslije - 1;
+                    }
+                    else if (lokacija < 25 && lokacija > 18 && x > 24)
+                    {
+                        int kockaPoslije;
+                        kockaPoslije = kocka - (24 - lokacija);
+                        lokacija = 63 + kockaPoslije;
+
+                    }
+                    else lokacija += kocka;
+                    x = lokacija;
+                    figura.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
+                    igra.igraci[2].pijuni[idPijun].TrenutnaLokacija = lokacija;
+                    ProvjeriJedeLi(lokacija);
+                    if (lokacija == 69)
+                        igra.igraci[2].pijuni[idPijun].UKucici = true;
+                    if (kocka != 6)
+                    {
+                        kocka = 0;
+                        naPotezu++;
+                        IgraSljedeci(naPotezu);
+                    }
+                    else if (kocka == 6)
+                    {
+                        btnKocka.Enabled = true;
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
+        private void PomjeriZute(int lokacija, PictureBox figura, int idPijun)
+        {
+            if (lokacija == -1 && kocka == 6)
+            {
+                int x = lokacija = 39;
+                figura.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
+                igra.igraci[3].pijuni[idPijun].TrenutnaLokacija = lokacija;
+                kocka = 0;
+                btnKocka.Enabled = true;
+            }
+
+            else if (lokacija != -1)
+            {
+                if (lokacija + kocka <= 75)
+                {
+                    int x = lokacija + kocka;
+                    if (x > 51 && x < 58)
+                    {
+                        int kockaPoslije;
+                        kockaPoslije = kocka - (51 - lokacija);
+                        lokacija = 0 + kockaPoslije - 1;
+                    }
+                    else if (lokacija < 38 && lokacija > 31 && x > 37)
+                    {
+                        int kockaPoslije;
+                        kockaPoslije = kocka - (37 - lokacija);
+                        lokacija = 69 + kockaPoslije;
+
+                    }
+                    else lokacija += kocka;
+                    x = lokacija;
+                    figura.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
+                    igra.igraci[3].pijuni[idPijun].TrenutnaLokacija = lokacija;
+                    ProvjeriJedeLi(lokacija);
+                    if (lokacija == 75)
+                        igra.igraci[3].pijuni[idPijun].UKucici = true;
+                    if (kocka != 6)
+                    {
+                        kocka = 0;
+                        naPotezu++;
+                        IgraSljedeci(naPotezu);
+                    }
+                    else if (kocka == 6)
+                    {
+                        btnKocka.Enabled = true;
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
+
+        private void ProvjeriJedeLi(int lokacija)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                if (naPotezu != i)
+                    for (int j = 0; j < 4; j++)
+                    {
+                        if (igra.igraci[i].pijuni[j].TrenutnaLokacija == lokacija)
+                            Jede(i, j);
+                    }
+            }
+        }
+        private void Jede(int igracID, int pijunID)
+        {
+            igra.igraci[igracID].pijuni[pijunID].TrenutnaLokacija = -1;
+            int left = igra.igraci[igracID].pijuni[pijunID].DefaultnaLokacija.Left;
+            int top = igra.igraci[igracID].pijuni[pijunID].DefaultnaLokacija.Top;
+            pictureBoxes[4 * igracID + pijunID].Location = new Point(left, top);
+        }
+        // Plavi
         private void pbPlavi1_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[0].pijuni[0].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[0].pijuni[0].TrenutnaLokacija = 0;
-                pbPlavi1.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[0].pijuni[0].TrenutnaLokacija != -1 && kocka != 0)
-            {
-                int x = igra.igraci[0].pijuni[0].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[0].pijuni[0].TrenutnaLokacija = x;
-                }
-                pbPlavi1.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraCrveni();
-            }
-         
+            PomjeriPlave(igra.igraci[0].pijuni[0].TrenutnaLokacija, pbPlavi1, 0);
         }
         private void pbPlavi2_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[0].pijuni[1].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[0].pijuni[1].TrenutnaLokacija = 0;
-                pbPlavi2.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[0].pijuni[1].TrenutnaLokacija != -1 && kocka != 0)
-            {
-                int x = igra.igraci[0].pijuni[1].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[0].pijuni[1].TrenutnaLokacija = x;
-                }
-                pbPlavi2.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraCrveni();
-            }
+            PomjeriPlave(igra.igraci[0].pijuni[1].TrenutnaLokacija, pbPlavi2, 1);
         }
         private void pbPlavi3_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[0].pijuni[2].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[0].pijuni[2].TrenutnaLokacija = 0;
-                pbPlavi3.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[0].pijuni[2].TrenutnaLokacija != -1 && kocka != 0)
-            {
-                int x = igra.igraci[0].pijuni[2].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[0].pijuni[2].TrenutnaLokacija = x;
-                }
-                pbPlavi3.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraCrveni();
-            }
-            
+            PomjeriPlave(igra.igraci[0].pijuni[2].TrenutnaLokacija, pbPlavi3, 2);
         }
         private void pbPlavi4_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[0].pijuni[3].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[0].pijuni[3].TrenutnaLokacija = 0;
-                pbPlavi4.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[0].pijuni[3].TrenutnaLokacija != -1 && kocka != 0)
-            {
-                int x = igra.igraci[0].pijuni[3].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[0].pijuni[3].TrenutnaLokacija = x;
-                }
-                pbPlavi4.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraCrveni();
-            }
-            
+            PomjeriPlave(igra.igraci[0].pijuni[3].TrenutnaLokacija, pbPlavi4, 3);
         }
+        // Crveni
         private void pbCrveni1_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[1].pijuni[0].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[1].pijuni[0].TrenutnaLokacija = 13;
-                pbCrveni1.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[1].pijuni[0].TrenutnaLokacija != -1 && kocka != 0)
-            {
-                int x = igra.igraci[1].pijuni[0].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[1].pijuni[0].TrenutnaLokacija = x;
-                }
-                pbCrveni1.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraZeleni();
-            }
-            
+            PomjeriCrvene(igra.igraci[1].pijuni[0].TrenutnaLokacija, pbCrveni1, 0);
         }
         private void pbCrveni2_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[1].pijuni[1].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[1].pijuni[1].TrenutnaLokacija = 13;
-                pbCrveni2.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                
-            }
-            else if (igra.igraci[1].pijuni[1].TrenutnaLokacija != -1 && kocka != 0)
-            {
-                int x = igra.igraci[1].pijuni[0].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[1].pijuni[1].TrenutnaLokacija = x;
-                }
-                pbCrveni2.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraZeleni();
-            }
-            
+            PomjeriCrvene(igra.igraci[1].pijuni[1].TrenutnaLokacija, pbCrveni2, 1);
         }
         private void pbCrveni3_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[1].pijuni[2].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[1].pijuni[2].TrenutnaLokacija = 13;
-                pbCrveni3.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[1].pijuni[2].TrenutnaLokacija != -1 && kocka != 0)
-            {
-                int x = igra.igraci[1].pijuni[2].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[1].pijuni[2].TrenutnaLokacija = x;
-                }
-                pbCrveni3.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraZeleni();
-            }
-            
+            PomjeriCrvene(igra.igraci[1].pijuni[2].TrenutnaLokacija, pbCrveni3, 2);
         }
         private void pbCrveni4_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[1].pijuni[3].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[1].pijuni[3].TrenutnaLokacija = 13;
-                pbCrveni4.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[1].pijuni[3].TrenutnaLokacija != -1 && kocka != 0)
-            {
-                int x = igra.igraci[1].pijuni[3].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[1].pijuni[3].TrenutnaLokacija = x;
-                }
-                pbCrveni4.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraZeleni();
-            }
+            PomjeriCrvene(igra.igraci[1].pijuni[3].TrenutnaLokacija, pbCrveni4, 3);
         }
+        // Zeleni
         private void pbZeleni1_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[2].pijuni[0].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[2].pijuni[0].TrenutnaLokacija = 26;
-                pbZeleni1.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[2].pijuni[0].TrenutnaLokacija != -1 && kocka != 0)
-            {
-                int x = igra.igraci[2].pijuni[0].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[2].pijuni[0].TrenutnaLokacija = x;
-                }
-
-                pbZeleni1.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraZuti();
-            }
+            PomjeriZelene(igra.igraci[2].pijuni[0].TrenutnaLokacija, pbZeleni1, 0);
         }
         private void pbZeleni2_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[2].pijuni[1].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[2].pijuni[1].TrenutnaLokacija = 26;
-                pbZeleni2.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[2].pijuni[1].TrenutnaLokacija != -1 && kocka != 0 && kocka != 0)
-            {
-                int x = igra.igraci[2].pijuni[1].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[2].pijuni[1].TrenutnaLokacija = x;
-                }
-                pbZeleni2.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraZuti();
-            }         
+            PomjeriZelene(igra.igraci[2].pijuni[1].TrenutnaLokacija, pbZeleni2, 1);
         }
         private void pbZeleni3_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[2].pijuni[2].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[2].pijuni[2].TrenutnaLokacija = 26;
-                pbZeleni3.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[2].pijuni[2].TrenutnaLokacija != -1 && kocka != 0)
-            {
-                int x = igra.igraci[2].pijuni[2].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[2].pijuni[2].TrenutnaLokacija = x;
-                }
-                pbZeleni3.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraZuti();
-            }
+            PomjeriZelene(igra.igraci[2].pijuni[2].TrenutnaLokacija, pbZeleni3, 2);
         }
         private void pbZeleni4_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[2].pijuni[3].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[2].pijuni[3].TrenutnaLokacija = 26;
-                pbZeleni4.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[2].pijuni[3].TrenutnaLokacija != -1 && kocka != 0)
-            {
-                int x = igra.igraci[2].pijuni[3].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[2].pijuni[3].TrenutnaLokacija = x;
-                }
-                pbZeleni4.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraZuti();
-            }
+            PomjeriZelene(igra.igraci[2].pijuni[3].TrenutnaLokacija, pbZeleni4, 3);
         }
+        // Zuti
         private void pbZuti1_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[3].pijuni[0].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[3].pijuni[0].TrenutnaLokacija = 39;
-                pbZuti1.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[3].pijuni[0].TrenutnaLokacija != -1 && kocka != 0)
-            {
-                int x = igra.igraci[3].pijuni[0].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[3].pijuni[0].TrenutnaLokacija = x;
-                }
-                pbZuti1.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraPlavi();
-            }           
+            PomjeriZute(igra.igraci[3].pijuni[0].TrenutnaLokacija, pbZuti1, 0);
         }
         private void pbZuti2_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[3].pijuni[1].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[3].pijuni[1].TrenutnaLokacija = 39;
-                pbZuti2.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[3].pijuni[1].TrenutnaLokacija != -1 && kocka != 0)
-            {
-                int x = igra.igraci[3].pijuni[1].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[3].pijuni[1].TrenutnaLokacija = x;
-                }
-                pbZuti2.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraPlavi();
-            }
+            PomjeriZute(igra.igraci[3].pijuni[1].TrenutnaLokacija, pbZuti2, 1);
         }
-
         private void pbZuti3_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[3].pijuni[2].TrenutnaLokacija == -1)
-            {
-                int x = igra.igraci[3].pijuni[2].TrenutnaLokacija = 39;
-                pbZuti3.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[3].pijuni[2].TrenutnaLokacija != -1 && kocka != 0)
-            {
-                int x = igra.igraci[3].pijuni[2].TrenutnaLokacija += kocka;
-                if (x > 51)
-                {
-                    x -= 52;
-                    igra.igraci[3].pijuni[2].TrenutnaLokacija = x;
-                }
-                pbZuti3.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraPlavi();
-            }
+            PomjeriZute(igra.igraci[3].pijuni[2].TrenutnaLokacija, pbZuti3, 2);
         }
-
         private void pbZuti4_Click(object sender, EventArgs e)
         {
-            if (kocka == 6 && igra.igraci[3].pijuni[3].TrenutnaLokacija == -1)
+            PomjeriZute(igra.igraci[3].pijuni[3].TrenutnaLokacija, pbZuti4, 3);
+        }
+
+        private void btnSkip_Click(object sender, EventArgs e)
+        {
+            naPotezu++;
+            if (naPotezu > 3) naPotezu = 0;
+            IgraSljedeci(naPotezu);
+        }
+
+        private void Restartuj()
+        {
+            for (int i = 0; i < 4; i++)
             {
-                int x = igra.igraci[3].pijuni[3].TrenutnaLokacija = 39;
-                pbZuti4.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-            }
-            else if (igra.igraci[3].pijuni[3].TrenutnaLokacija != -1 && kocka!=0)
-            {
-                int x = igra.igraci[3].pijuni[3].TrenutnaLokacija += kocka;
-                if (x > 51)
+                for (int j = 0; j < 4; j++)
                 {
-                    x -= 52;
-                    igra.igraci[3].pijuni[3].TrenutnaLokacija = x;
+                    igra.igraci[i].pijuni[j].TrenutnaLokacija = -1;
+                    igra.igraci[i].pijuni[j].UKucici = false;
+                    int left = igra.igraci[i].pijuni[j].DefaultnaLokacija.Left;
+                    int top = igra.igraci[i].pijuni[j].DefaultnaLokacija.Top;
+                    pictureBoxes[4 * i + j].Location = new Point(left, top);
                 }
-                pbZuti4.Location = new Point(polje.Tabla[x].Left, polje.Tabla[x].Top);
-                kocka = 0;
-                IgraPlavi();
             }
+            kocka = 0;
+            naPotezu = 0;
+            brojBacanja = 0;
+            IgraSljedeci(naPotezu);
+        }
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            Restartuj();
         }
     }
 }
